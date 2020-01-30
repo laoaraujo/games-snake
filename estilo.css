@@ -1,0 +1,29 @@
+.container{
+	text-align: center;
+    float: left;
+	background-color:antiquewhite;
+	height: 98vh;
+    width: 99vw;
+}
+h1 , h3{
+	margin-left: 40%;
+    width: 20%;
+
+}
+table{
+	margin-left:33%;
+	background-color: white;
+	border: 1px solid #888;
+}
+
+td{
+	border-radius: 50%;
+	width: 10px;
+	height: 10px;
+}
+/* .snake-active{
+	background-color: greenyellow;
+} */
+.apple-active{
+	background-color: red;
+}

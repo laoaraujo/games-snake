@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Snake</title>
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
+	<script src="script.js"></script>
+	
+</head>
+<body>
+	<div class="container">
+		<h1>Snake in Knockout</h1>
+
+		<table data-bind="foreach: arrY">
+			<tr data-bind="foreach: $parent.arrX()">
+				<td data-bind="css: {'snake-active':$root.hasSnake($data,$parent),
+				'apple-active':$root.hasApple($data,$parent)}, 
+				style:{'background-color': $root.hasSnake($data,$parent)?$root.getRandomColor():''}"></td>
+			</tr>
+		</table>
+
+		<h1 data-bind="text:'Score: ' + score()"></h1>
+		<h3>Portal:<input type="checkbox" data-bind="checked: portal"></h3>
+		
+	</div>
+</body>
+</html>
